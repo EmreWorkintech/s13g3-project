@@ -72,7 +72,7 @@ server.get("/auth", (req,res)=>{
         console.log("Parola: " + parola)
         if (parola === 'fsweb1122'){
             console.log("Hoş geldin!..")
-            res.status(200).send("<h1>Hoş geldiniz</h1>");
+            res.status(200).send("<h1>Hoş geldiniz</h1>" + "<h2>" + req.ip +"</h2>");
             isAuthenticated = true;
         } else {
             console.log("Yanlış parola. Giremezsin...")
